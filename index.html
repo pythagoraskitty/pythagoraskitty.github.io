@@ -1,126 +1,313 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126648183-1"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126648183-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-126648183-1');
+  </script>
 
-  		gtag('config', 'UA-126648183-1');
-	</script>
+  <title>Camillia Smith Barnes, Ph.D.</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal homepage of Camillia Smith Barnes, Ph.D., featuring professional links, semi-precious stone mosaics, and Pythagorean Roses art generated in LaTeX.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<title>Camillia Smith Barnes, Ph.D.</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" >
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style type="text/css">
+  <style type="text/css">
+    :root {
+      --bg-gradient: radial-gradient(circle at 50% 30%, #225c3f 0%, #101914 100%);
+      --text-primary: #f3f4f6;
+      --text-secondary: #cbd5e1;
+      --accent: #fb7185;
+      --accent-hover: #fda4af;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.08);
+    }
 
-h1 {
-	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-	color: #FFFFFF;
-	font-size: 48px;
-	font-weight: 300;	
-	margin: 0 0 0 0;
-	padding: 0;
-	text-align: center;
-}
+    body {
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-primary);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0;
+      padding: 3rem 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
 
-body, p {
-	background: radial-gradient(circle, #6AFAA5, gray);
-	font-family: Georgia, serif;
-	color: #FFFFFF;
-	font-size: 16px;
-	font-weight: 500;
-	margin: 0;
-	padding: 1cm;
-	text-align: left;
-}
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
 
-a {
-	color: #D85878;
-	font-weight: 600;
-	text-decoration:underline;
-}
-</style>
+    h1 {
+      font-family: 'Playfair Display', Constantia, Georgia, serif;
+      font-size: 2.85rem;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 2.5rem;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
 
+    a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(251, 113, 133, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      border-bottom-color: var(--accent-hover);
+    }
+
+    .main-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .main-list > li {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+      color: #ffffff;
+    }
+
+    .main-list ul {
+      list-style: none;
+      padding-left: 1.5rem;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .main-list ul li {
+      position: relative;
+      margin-bottom: 0.75rem;
+    }
+
+    .main-list ul li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: -1.25rem;
+      font-weight: bold;
+    }
+
+    .main-list ul li ul {
+      margin-top: 0.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .main-list ul li ul li::before {
+      content: "◦";
+    }
+
+    .info-note {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    /* Mosaics Gallery */
+    .mosaic-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .mosaic-gallery img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+
+    .mosaic-gallery img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 24px rgba(251, 113, 133, 0.25);
+    }
+
+    /* Rose Gallery */
+    .rose-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .rose-gallery img {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--card-border);
+      padding: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+    }
+
+    .rose-gallery img:hover {
+      transform: scale(1.08);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .triples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 0.50rem;
+      padding: 0 !important;
+      margin: 1.25rem 0 !important;
+      list-style: none !important;
+    }
+
+    .triples-grid li {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 0.4rem;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      margin: 0 !important;
+    }
+
+    .triples-grid li::before {
+      display: none !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .main-list > li {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-	<h1>Camillia Smith Barnes, Ph.D.</h1>
-	
-	<br>
+  <div class="container">
+    <h1>Camillia Smith Barnes, Ph.D.</h1>
+    
+    <ul class="main-list">
+      <li>
+        <div class="section-title">View or download my:</div>
         <ul>
-            <li>View or download my: 
-                <ul>
-                    <li><a href="/cv/smithbarnes-resume.pdf" target="_top">Resume</a> (current as of early 2023)</li>
-                    <li><a href="/cv/smithbarnes-cv.pdf" target="_top">Curriculum Vitae</a> (slightly outdated)</li>
-                </ul>
-    	    </li>
-            <br>
-    
-             <li>Connect with me on:   
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/csbphd" target="_top">LinkedIn</a> </li>
-		    <li><a href="https://github.com/pythagoraskitty" target="_top">GitHub</a></li>
-                    <li><a href="https://www.facebook.com/cammie.barnes" target="_top">Facebook</a></li>
-                    <li><a href="https://www.quora.com/profile/Camillia-Smith-Barnes" target="_top">Quora</a></li>
-                </ul>
-             </li>
-             <br>
-    
-             <li> Visit me on my favorite code challenge sites:
-                <ul>	
-                    <li><a href="https://leetcode.com/pythagoraskitty/" target="_top">LeetCode</a></li>
-                    <li><a href="https://www.codewars.com/users/pythagoraskitty" target="_top">Codewars</a></li>
-                    <li><a href="http://practice.geeksforgeeks.org/user-profile.php?user=Camillia%20Smith" target="_top">Geeksforgeeks</a></li>
-                    <li><a href="https://www.hackerrank.com/pythagoraskitty?hr_r=1" target="_top">HackerRank</a></li>
-                    <li><a href="https://foobar.withgoogle.com/" target="_top">Google foobar</a> 
-		    <br> &hellip;You can't actually visit my foobar profile, so here are some <a href="/foobar/foobar-screenshots.pdf" target="_top">screenshots</a> instead, including full journal with storyline (but no questions or solutions: sorry, can't give those away!)</li>
-                </ul>
-    	    </li>
-            <br>
-		
-	    <li> Enjoy some photos of my semi-precious stone mosaics:
-	    </li>
-            <br>   
-	    <br>
-		 <img src="/images/99B20216-ADDC-4C93-BD4E-AC78F99051A0.jpeg" height="250" width="250"/>
-		 <img src="/images/D0A1C99C-D974-4655-B124-726298D851C0.jpeg" height="250" width="250"/>
-                 <img src="/images/0783DCC7-2490-4FDA-97C6-F56B4E2E9BAB.jpeg" height="250" width="250"/>
-                 <img src="/images/B7347B75-FFF0-4AC4-BB5D-895901032734.jpeg" height="250" width="250"/>
-                 <img src="/images/IMG_8482.jpeg" height="250" width="250"/>
-                 <img src="/images/IMG_8484.jpeg" height="250" width="250"/>
-                 <img src="/images/IMG_8489.jpeg" height="250" width="250"/>
-	    <br>
-	    <br>
-    
-            <li>Check out my <a href="https://github.com/pythagoraskitty/roses" target="_top">Pythagorean Roses</a> (nested squares) generated in LaTeX via Python!          
-                <br> &hellip;Can you figure out which primitive Pythagorean triple corresponds to which image?
-                <ul>
-                	<li> (3, 4, 5) </li>
-                	<li> (5, 12, 13) </li>
-                	<li> (7, 24, 25) </li> 
-                	<li> (8, 15, 17) </li>
-                	<li> (9, 40, 41) </li>
-                	<li> (11, 60, 61) </li>
-                	<li> (12, 35, 37) </li>
-                	<li> (20, 21, 29) </li>
-                </ul>
-             </li>
-             <br>
+          <li>
+            <a href="/cv/smithbarnes-resume.pdf" target="_top">Resume</a> 
+            <span class="info-note">(current as of early 2023)</span>
+          </li>
+          <li>
+            <a href="/cv/smithbarnes-cv.pdf" target="_top">Curriculum Vitae</a> 
+            <span class="info-note">(slightly outdated)</span>
+          </li>
+        </ul>
+      </li>
 
-   	     <img src="/images/pythrose7+24-n16-s3-purple.svg"/>		
-   	     <img src="/images/pythrose5+12-n16-s3-purple.svg"/>
-   	     <img src="/images/pythrose9+40-n16-s3-purple.svg"/>
-   	     <img src="/images/pythrose8+15-n16-s3-purple.svg"/>
-   	     <img src="/images/pythrose3+4-n16-s3-purple.svg"/>
-   	     <img src="/images/pythrose12+35-n16-s3-purple.svg"/>
-	     <img src="/images/pythrose20+21-n16-s3-purple.svg"/>		
-   	     <img src="/images/pythrose11+60-n16-s3-purple.svg"/>
-   		
-   	     <br>
-    	     <br>
-	</ul>
+      <li>
+        <div class="section-title">Connect with me on:</div>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/csbphd" target="_top">LinkedIn</a></li>
+          <li><a href="https://github.com/pythagoraskitty" target="_top">GitHub</a></li>
+          <li><a href="https://www.facebook.com/cammie.barnes" target="_top">Facebook</a></li>
+          <li><a href="https://www.quora.com/profile/Camillia-Smith-Barnes" target="_top">Quora</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="section-title">Visit me on my favorite code challenge sites:</div>
+        <ul>
+          <li><a href="https://leetcode.com/pythagoraskitty/" target="_top">LeetCode</a></li>
+          <li><a href="https://www.codewars.com/users/pythagoraskitty" target="_top">Codewars</a></li>
+          <li><a href="http://practice.geeksforgeeks.org/user-profile.php?user=Camillia%20Smith" target="_top">Geeksforgeeks</a></li>
+          <li><a href="https://www.hackerrank.com/pythagoraskitty?hr_r=1" target="_top">HackerRank</a></li>
+          <li>
+            <a href="https://foobar.withgoogle.com/" target="_top">Google foobar</a> 
+            <span class="info-note">
+              &hellip;You can't actually visit my foobar profile, so here are some 
+              <a href="/foobar/foobar-screenshots.pdf" target="_top">screenshots</a> instead, 
+              including full journal with storyline (but no questions or solutions: sorry, can't give those away!)
+            </span>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="section-title">Enjoy some photos of my semi-precious stone mosaics:</div>
+        <div class="mosaic-gallery">
+          <img src="/images/99B20216-ADDC-4C93-BD4E-AC78F99051A0.jpeg" alt="Stone Mosaic 1">
+          <img src="/images/D0A1C99C-D974-4655-B124-726298D851C0.jpeg" alt="Stone Mosaic 2">
+          <img src="/images/0783DCC7-2490-4FDA-97C6-F56B4E2E9BAB.jpeg" alt="Stone Mosaic 3">
+          <img src="/images/B7347B75-FFF0-4AC4-BB5D-895901032734.jpeg" alt="Stone Mosaic 4">
+          <img src="/images/IMG_8482.jpeg" alt="Stone Mosaic 5">
+          <img src="/images/IMG_8484.jpeg" alt="Stone Mosaic 6">
+          <img src="/images/IMG_8489.jpeg" alt="Stone Mosaic 7">
+        </div>
+      </li>
+
+      <li>
+        <div class="section-title">
+          Check out my <a href="https://github.com/pythagoraskitty/roses" target="_top">Pythagorean Roses</a> (nested squares) generated in LaTeX via Python!
+        </div>
+        <span class="info-note">&hellip;Can you figure out which primitive Pythagorean triple corresponds to which image?</span>
+        
+        <ul class="triples-grid">
+          <li>(3, 4, 5)</li>
+          <li>(5, 12, 13)</li>
+          <li>(7, 24, 25)</li>
+          <li>(8, 15, 17)</li>
+          <li>(9, 40, 41)</li>
+          <li>(11, 60, 61)</li>
+          <li>(12, 35, 37)</li>
+          <li>(20, 21, 29)</li>
+        </ul>
+
+        <div class="rose-gallery">
+          <img src="/images/pythrose7+24-n16-s3-purple.svg" alt="Pythagorean Rose 7-24-25">
+          <img src="/images/pythrose5+12-n16-s3-purple.svg" alt="Pythagorean Rose 5-12-13">
+          <img src="/images/pythrose9+40-n16-s3-purple.svg" alt="Pythagorean Rose 9-40-41">
+          <img src="/images/pythrose8+15-n16-s3-purple.svg" alt="Pythagorean Rose 8-15-17">
+          <img src="/images/pythrose3+4-n16-s3-purple.svg" alt="Pythagorean Rose 3-4-5">
+          <img src="/images/pythrose12+35-n16-s3-purple.svg" alt="Pythagorean Rose 12-35-37">
+          <img src="/images/pythrose20+21-n16-s3-purple.svg" alt="Pythagorean Rose 20-21-29">
+          <img src="/images/pythrose11+60-n16-s3-purple.svg" alt="Pythagorean Rose 11-60-61">
+        </div>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
