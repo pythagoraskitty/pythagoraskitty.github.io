@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cammie.tech/sitemap.xml
