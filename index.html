@@ -173,6 +173,43 @@
       box-shadow: 0 12px 24px rgba(251, 113, 133, 0.25);
     }
 
+    /* Cat Gallery */
+    .cat-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.25rem 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .cat-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .cat-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+
+    .cat-card img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 24px rgba(251, 113, 133, 0.25);
+    }
+
+    .cat-name {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--text-primary);
+    }
+
     /* Rose Gallery */
     .rose-gallery {
       display: grid;
@@ -343,15 +380,37 @@
 
       <li>
         <div class="section-title">See my cats, past &amp; present:</div>
-        <div class="mosaic-gallery">
-          <img src="/images/DSCN3634.jpg" alt="Cat photo">
-          <img src="/images/IMG_3566.jpeg" alt="Cat photo">
-          <img src="/images/IMG_9653.jpeg" alt="Cat photo">
-          <img src="/images/IMG_3552.jpg" alt="Cat photo">
-          <img src="/images/IMG_3246.jpeg" alt="Cat photo">
-          <img src="/images/IMG_0167.jpeg" alt="Cat photo">
-          <img src="/images/IMG_0448.jpeg" alt="Cat photo">
+        <div class="cat-gallery">
+          <div class="cat-card">
+            <img src="/images/DSCN3634.jpg" alt="Archimedes">
+            <span class="cat-name">Archimedes</span>
+          </div>
+          <div class="cat-card">
+            <img src="/images/IMG_3566.jpeg" alt="Copernicus">
+            <span class="cat-name">Copernicus</span>
+          </div>
+          <div class="cat-card">
+            <img src="/images/IMG_9653.jpeg" alt="Stanley">
+            <span class="cat-name">Stanley*</span>
+          </div>
+          <div class="cat-card">
+            <img src="/images/IMG_3552.jpg" alt="Fibonacci">
+            <span class="cat-name">Fibonacci</span>
+          </div>
+          <div class="cat-card">
+            <img src="/images/IMG_3246.jpeg" alt="Pythagoras">
+            <span class="cat-name">Pythagoras</span>
+          </div>
+          <div class="cat-card">
+            <img src="/images/IMG_0167.jpeg" alt="Ada Lovelace">
+            <span class="cat-name">Ada Lovelace</span>
+          </div>
+          <div class="cat-card">
+            <img src="/images/IMG_0448.jpeg" alt="Euclid">
+            <span class="cat-name">Euclid</span>
+          </div>
         </div>
+        <span class="info-note" style="margin-top: 1.25rem;">* Stanley was named after Professor Emeritus <a href="https://en.wikipedia.org/wiki/Richard_P._Stanley" target="_top">Richard P. Stanley</a>.</span>
       </li>
 
       <li>
