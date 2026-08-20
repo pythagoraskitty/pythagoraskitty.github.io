@@ -176,25 +176,27 @@
     /* Rose Gallery */
     .rose-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
       margin-top: 1.5rem;
     }
 
     .rose-gallery img {
+      box-sizing: border-box;
       width: 100%;
       aspect-ratio: 1;
-      border-radius: 8px;
+      border-radius: 10px;
       background: rgba(255, 255, 255, 0.01);
       border: 1px solid var(--card-border);
       padding: 6px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
     }
 
     .rose-gallery img:hover {
-      transform: scale(1.08);
+      transform: scale(1.06);
       background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 12px 24px rgba(251, 113, 133, 0.25);
     }
 
     .triples-grid {
